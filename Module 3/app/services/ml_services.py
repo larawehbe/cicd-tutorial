@@ -25,4 +25,4 @@ def predict_model(features: list[float]):
         raise ModelNotFoundException("Trained model not found.")
     model = joblib.load(MODEL_PATH)
     pred = model.predict([features])[0]
-    return pred
+    return int(pred)
